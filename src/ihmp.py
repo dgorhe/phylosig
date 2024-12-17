@@ -20,6 +20,7 @@ def strip_df(df):
 
 def get_diffs(
     dataset,
+    prefix_parent="/Users/darveshgorhe/columbia/phd/itisk/phylosig",
     top_n=None,
     get_abundances=False,
     include_metadata=False,
@@ -28,11 +29,11 @@ def get_diffs(
 ):
     """Loads all our data!"""
     if dataset == "ibd":
-        prefix = "/home/phil/DATA/ihmp/IBD"
+        prefix = f"{prefix_parent}/IBD"
     elif dataset == "moms":
-        prefix = "/home/phil/DATA/ihmp/MOMS-PI"
+        prefix = f"{prefix_parent}/MOMS-PI"
     elif dataset == "t2d":
-        prefix = "/home/phil/DATA/ihmp/T2D"
+        prefix = f"{prefix_parent}/T2D"
     else:
         raise ValueError(f"Unknown dataset: {dataset}")
 
