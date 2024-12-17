@@ -8,3 +8,9 @@ emp/data/
 *.pkl
 embed/
 diabimmune/
+
+# Optimal Transport related files to ignore
+taxid_and_kmer.txt
+kmer_vectors.txt
+figures/
+data/
