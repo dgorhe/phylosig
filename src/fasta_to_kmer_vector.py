@@ -6,10 +6,14 @@ from Bio.SeqIO.FastaIO import SimpleFastaParser
 from itertools import product
 import click
 
+
 def load_fasta_as_string(fasta_path: str) -> str:
     with open(fasta_path, "r") as file_in:
         parsed = list(SimpleFastaParser(file_in))
-        sequence = parsed[0][1]
+
+        # Note: treating all nucleotides as equally confident is a naive way to do this
+        # Add options for users (e.g. filtering out, converting, making separate vectors, etc.)
+        sequence = parsed[0][1].upper()
 
     return sequence
 
